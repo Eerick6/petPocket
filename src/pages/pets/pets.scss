@@ -1,0 +1,271 @@
+/* Contenedor de mascotas */
+.pets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  width: 100%;
+  margin-bottom: 40px !important;
+  display: flex; /* Activamos Flexbox */
+  justify-content: flex-end; /* Alineamos los breadcrumbs a la derecha */
+}
+
+/* Encabezado de mascotas */
+.pets-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Entrada de búsqueda */
+.search-input {
+  max-width: 30%;
+}
+
+/* Contenedor de tarjetas de mascotas */
+.pets-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Estilo de las tarjetas de mascotas */
+.pet-card {
+  width: 18rem;
+  
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.pet-img {
+  height: 100px !important;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-card .card-body {
+  padding: 15px;
+}
+
+.pet-card .buttons-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pet-card .buttons-card button {
+  width: 28%;
+}
+
+.pet-card .fa-paw,
+.pet-card .fa-calendar {
+  margin-right: 8px;
+  color: #fec235;
+}
+.fa-heartbeat{
+  color: rgb(255, 6, 6);
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilos para los modales */
+.modal {
+  display: none; /* Por defecto, el modal está oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el modal */
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Para asegurarse de que esté por encima de otros elementos */
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 80%; /* El modal ocupará como máximo el 80% del ancho */
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 80vh; /* Para asegurarse de que el modal no ocupe toda la altura */
+}
+
+/* Estilos para el título y contenido del modal */
+.modal-header,
+.modal-body,
+.modal-footer {
+  margin-bottom: 20px;
+}
+
+.modal-header {
+  
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center !important;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fec235;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-footer button:hover {
+  background-color: #155c28;
+}
+
+/* Cerrar el modal */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%; /* El modal ocupará el 90% en pantallas pequeñas */
+    padding: 15px;
+  }
+
+  .modal-header {
+    font-size: 1.25rem;
+  }
+
+  .modal-body {
+    font-size: 0.9rem;
+  }
+
+  .modal-footer button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 95%; /* El modal ocupará el 95% en pantallas móviles */
+    padding: 10px;
+  }
+
+  .modal-header {
+    font-size: 1.1rem;
+  }
+
+  .modal-body {
+    font-size: 0.85rem;
+  }
+
+  .modal-footer button {
+    padding: 8px 15px;
+  }
+}
+
+/* Estilos generales para el layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #fec235;
+}
+
+a:hover {
+  color: #155c28;
+}
+
+/* Otros ajustes para la estructura */
+header,
+footer {
+  background-color: #fec235;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fec235;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #155c28;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #fec235;
+  outline: none;
+}
+

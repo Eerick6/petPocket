@@ -1,0 +1,52 @@
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado uniforme entre tarjetas */
+    justify-content: space-between;
+}
+
+.card-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 20px); /* 3 tarjetas por fila en pantallas grandes */
+    margin-bottom: 20px; /* Espacio entre filas */
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+/* 📱 Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* 2 tarjetas por fila */
+    }
+}
+
+/* 📱 Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* 1 tarjeta por fila */
+    }
+}
+
+.card-img-top {
+    
+    height: 250px;
+    position: relative;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.buttons-card .btn {
+    min-width: 100px; /* Opcional: para garantizar que los botones tengan un tamaño mínimo */
+  }

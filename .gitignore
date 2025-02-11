@@ -1,0 +1,18 @@
+# Dependencias
+node_modules/
+ 
+# Archivos de compilación
+dist/
+build/
+
+# Archivos de configuración y entorno
+.env
+.env.local
+.env.development
+.env.production
+
+# Cachés y logs
+*.log
+yarn.lock
+package-lock.json
+.DS_Store

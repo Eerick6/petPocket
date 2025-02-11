@@ -1,0 +1,88 @@
+.dashboard {
+    background: #f0f4f8;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .page-header {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+
+  .summary-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  .summary-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .summary-card.pets {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+  }
+
+  .summary-card.appointments {
+    background: linear-gradient(45deg, #f6d365, #fda085);
+  }
+
+  .summary-card.payments {
+    background: linear-gradient(45deg, #96fbc4, #f9f586);
+  }
+
+  .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .display-7 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  .activity-list, .alert-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .activity-item, .alert-item {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .emoji-bullet {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .alert-icon {
+    color: #e74c3c;
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .recent-activity, .alerts {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .recent-activity {
+    background: linear-gradient(45deg, #e3fdf5, #ffe6fa);
+  }
+
+  .alerts {
+    background: linear-gradient(45deg, #fff1eb, #ace0f9);
+  }
