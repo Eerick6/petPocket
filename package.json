@@ -1,5 +1,5 @@
 {
-  "name": "color-admin",
+  "name": "Pet Pocket",
   "version": "5.4.3",
   "private": true,
   "dependencies": {
@@ -30,6 +30,7 @@
     "react-bootstrap": "^2.10.9",
     "react-bootstrap-daterangepicker": "^8.0.0",
     "react-calendar": "^5.1.0",
+    "react-chartjs-2": "^5.3.0",
     "react-color": "^2.19.3",
     "react-countdown": "^2.3.6",
     "react-data-table-component": "^7.6.2",

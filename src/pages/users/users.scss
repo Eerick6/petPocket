@@ -3,5 +3,48 @@
     background-color: rgba(255, 182, 45, 0.92) !important;
 }
 
+.page-header-u{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    width:100%;
+    background-color: #ffffffdf;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+@media(max-width:352px){
+    .page-header-u{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.btn-success {
+    border: 1px solid #3b3b3b !important;
+    background-color: rgb(255, 182, 13) !important;
+}
+
+.btn-success:hover {
+    border: 1px solid #3b3b3b !important;
+    background-color: rgb(215, 150, 0) !important;
+}
+
+.table-bordered {
+    border: 1px solid #a0a0a0 !important; /* Cambia el color del borde de la tabla */
+    background-color: rgba(255, 255, 255, 0.904);
+    margin-top: 30px;
+    border-radius: 10px ;
+    overflow: hidden;
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #9a9a9a !important; /* Cambia el color de las líneas de borde de las celdas */
+    
+  }
+  
 
 

@@ -2,7 +2,7 @@
 .pets-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -18,14 +18,28 @@
 .pets-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-bottom: 40px;
+
 }
 
 /* Entrada de búsqueda */
 .search-input {
   max-width: 30%;
+  min-width: 250px;
+}
+
+@media(max-width:500px) {
+  .pets-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-input {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
 
 /* Contenedor de tarjetas de mascotas */
@@ -33,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 /* Estilo de las tarjetas de mascotas */
@@ -46,7 +61,8 @@
   transition: all 0.3s ease;
 }
 .pet-img {
-  height: 100px !important;
+  height: 150px !important;
+  
 }
 
 .pet-card:hover {

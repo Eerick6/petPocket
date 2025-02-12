@@ -5,6 +5,40 @@
     justify-content: space-between;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    
+    color: #333;
+  }
+  
+  .header .btn {
+    background-color: #007bff; /* Puedes elegir el color que prefieras */
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header .btn:hover {
+    background-color: #0056b3; /* Color al pasar el ratón */
+  }
+  
+  .header .btn:active {
+    background-color: #004085; /* Color al hacer clic */
+  }
+  
+
 .card-s {
     display: flex;
     flex-direction: column;
@@ -17,14 +51,14 @@
 
 /* 📱 Para pantallas medianas (tablets) */
 @media (max-width: 1024px) {
-    .card {
+    .card-s {
         width: calc(50% - 20px); /* 2 tarjetas por fila */
     }
 }
 
 /* 📱 Para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
-    .card {
+    .card-s {
         width: 100%; /* 1 tarjeta por fila */
     }
 }

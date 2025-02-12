@@ -38,15 +38,18 @@ function Home() {
   };
 
   return (
-    <div className=" dashboard">
+    
+    <div className="dashboard">
       {/* Breadcrumb */}
       <ol className="breadcrumb float-xl-end">
-          <li className="breadcrumb-item"><Link to="/">🏠 Home</Link></li>
-          <li className="breadcrumb-item active">📊 Dashboard</li>
+        <li className="breadcrumb-item"><Link to="/">🏠 Home</Link></li>
       </ol>
 
       {/* Header */}
-      <h1 className="page-header">📊 Pet Pocket <small>Bienvenido</small></h1>
+      <div className="page-header">
+        <img src="assets/img/petP1.png" alt="" />
+      <h1 > Pet Pocket</h1>
+      </div>
 
       {/* Secciones organizadas */}
       <div className="row g-3">
@@ -55,7 +58,7 @@ function Home() {
           <div className="card summary-card pets" onClick={() => setShowMascotasModal(true)}>
             <div className="card-body">
               <h5 className="card-title">🐾 Mascotas Registradas</h5>
-              <p className="card-text display-7">Total: {totalMascotas} </p>
+              <p className="card-text display-7">Total: {totalMascotas}</p>
             </div>
           </div>
         </div>
@@ -64,7 +67,7 @@ function Home() {
           <div className="card summary-card appointments" onClick={() => setShowCitasModal(true)}>
             <div className="card-body">
               <h5 className="card-title">📅 Citas Programadas</h5>
-              <p className="card-text display-7">Pendientes: {citasHoy} </p>
+              <p className="card-text display-7">Pendientes: {citasHoy}</p>
             </div>
           </div>
         </div>
@@ -73,7 +76,7 @@ function Home() {
           <div className="card summary-card payments" onClick={() => setShowPagosModal(true)}>
             <div className="card-body">
               <h5 className="card-title">💰 Pagos Pendientes</h5>
-              <p className="card-text display-7"> Total: ${pagosPendientes} </p>
+              <p className="card-text display-7">Total: ${pagosPendientes}</p>
             </div>
           </div>
         </div>
@@ -89,7 +92,7 @@ function Home() {
                 {atencionesRecientes.map((atencion) => (
                   <li key={atencion.id} className="activity-item">
                     <span className="emoji-bullet">🩺</span>
-                    {atencion.descripcion}
+                    {atencion.descripcion} - <strong>{atencion.mascota}</strong>
                   </li>
                 ))}
               </ul>
@@ -121,10 +124,12 @@ function Home() {
           <Modal.Title>📅 Citas Hoy</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Detalles de las citas programadas:</p>
+          <p>Detalles de las citas programadas para hoy:</p>
           <ul>
             {atencionesRecientes.map((atencion) => (
-              <li key={atencion.id}>{atencion.descripcion}</li>
+              <li key={atencion.id}>
+                {atencion.descripcion} con la mascota {atencion.mascota}
+              </li>
             ))}
           </ul>
         </Modal.Body>
